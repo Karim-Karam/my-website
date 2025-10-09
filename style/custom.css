@@ -1,0 +1,113 @@
+/* css/custom.css */
+
+/* Style for the active filter button */
+.filter-btn.active {
+    background-color: #2749F5; /* Blue */
+    color: white;
+    border-color: #2749F5;
+}
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Animation for modal appearance */
+#project-modal.hidden #modal-content {
+    transform: scale(0.95);
+    opacity: 0;
+}
+#project-modal #modal-content {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 300ms ease-out, opacity 300ms ease-out;
+}
+
+/* ==================================
+   NEW Skills Slider Section Styles
+   ================================== */
+
+.skill-slide {
+    flex-shrink: 0;
+    width: 33.333333%;
+    padding: 1rem;
+}
+
+@media (min-width: 640px) {
+    .skill-slide {
+        width: 25%;
+    }
+}
+
+@media (min-width: 768px) {
+    .skill-slide {
+        width: 20%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .skill-slide {
+        width: 16.666667%;
+    }
+}
+
+.skill-slide-content {
+    /* background-color: rgba(31, 41, 55, 0.5); */
+    backdrop-filter: blur(4px);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid rgb(55, 65, 81); */
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.skill-slide-content:hover {
+    transform: scale(1.5);
+    /* background-color: rgb(31, 41, 55); */
+    /* border-color: rgb(59, 130, 246); */
+}
+
+.skill-slide-content img {
+    width: 120px !important;
+    height: 120px !important;
+    margin-bottom: 1rem;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.skill-slide-content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(229, 231, 235);
+}
+
+/* Navigation Buttons Styling */
+.slider-nav-btn {
+    position: absolute;
+    display: none;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: rgba(31, 41, 55, 0.5);
+    backdrop-filter: blur(4px);
+    color: white;
+    border-radius: 9999px;
+    width: 3rem;
+    height: 3rem;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid rgb(55, 65, 81); */
+    transition: all 0.3s;
+}
+
+.slider-nav-btn:hover {
+    background-color: rgb(37, 99, 235);
+    border-color: rgb(59, 130, 246);
+    transform: translateY(-50%) scale(1.1);
+}
