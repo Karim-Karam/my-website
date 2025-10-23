@@ -40,16 +40,16 @@ const projectsData = [
         liveLink: 'https://droobalmjd.netlify.app/',
         repoLink: null
     },
-    {
-        id: 5,
-        title: 'Egyptian Robotics & RC Sports Federation',
-        description: 'The Federation empowers youth in Robotics, AI, RC Sports, and Unmanned Vehicles.',
-        technologies: ["HTML", "CSS", "JavaScript", "Firebase"],
-        image: 'images/projects/errcf.png',
-        videoUrl: null,
-        liveLink: 'https://staging.errcsf.org/',
-        repoLink: null
-    },
+    // {
+    //     id: 5,
+    //     title: 'Egyptian Robotics & RC Sports Federation',
+    //     description: 'The Federation empowers youth in Robotics, AI, RC Sports, and Unmanned Vehicles.',
+    //     technologies: ["HTML", "CSS", "JavaScript", "Firebase"],
+    //     image: 'images/projects/errcf.png',
+    //     videoUrl: null,
+    //     liveLink: 'https://staging.errcsf.org/',
+    //     repoLink: null
+    // },
     {
         id: 6,
         title: 'Arcon',
