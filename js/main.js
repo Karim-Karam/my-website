@@ -22,13 +22,13 @@ const projectsData = [
     },
     {
         id: 3,
-        title: "Siminds",
-        description: 'Siminds, a UK-based company, develops cutting-edge virtual reality and simulation solutions.',
-        technologies: ["HTML", "CSS", "JavaScript"],
-        image: 'images/projects/siminds.png',
+        title: "Apple Website Clone",
+        description: '  A responsive clone of the Apple website, replicating its design and functionality using React, GSAP, and Three js.',
+        technologies: ["React.js", "GSAP", "Three.js"],
+        image: 'images/projects/apple.png',
         videoUrl: null,
-        liveLink: 'https://www.siminds.com/',
-        repoLink: "#"
+        liveLink: 'https://apple-p2iqu07sp-karim-karams-projects.vercel.app/',
+        repoLink: "https://github.com/Karim-Karam/apple-website"
     },
     {
         id: 4,
@@ -39,6 +39,16 @@ const projectsData = [
         videoUrl: '/videos/durob.mp4',
         liveLink: 'https://droobalmjd.netlify.app/',
         repoLink: null
+    },
+    {
+        id: 5,
+        title: "Siminds",
+        description: 'Siminds, a UK-based company, develops cutting-edge virtual reality and simulation solutions.',
+        technologies: ["HTML", "CSS", "JavaScript"],
+        image: 'images/projects/siminds.png',
+        videoUrl: null,
+        liveLink: 'https://www.siminds.com/',
+        repoLink: "#"
     },
     // {
     //     id: 5,
