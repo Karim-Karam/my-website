@@ -1,444 +1,715 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Karim Karam | Front-End React & Next.js Developer</title>
 
-    <meta name="description"
-        content="Portfolio of Karim Karam, a passionate Front-End Developer based in Egypt, specializing in creating high-performance web applications with React, Next.js, and React Native.">
+    <meta
+      name="description"
+      content="Portfolio of Karim Karam, a passionate Front-End Developer based in Egypt, specializing in creating high-performance web applications with React, Next.js, and React Native."
+    />
 
     <link rel="icon" type="image/png" href="/images/logo.png" />
 
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Karim Karam",
-      "url": "https://karimkaram.netlify.app",  "image": "https://karimkaram.netlify.app/images/karim.png", "sameAs": [
-        "https://www.linkedin.com/in/karim-karam-33a36b174/",
-        "https://github.com/Karim-Karam"
-      ],
-      "jobTitle": "Front-End Developer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Arcon"
-      },
-      "knowsAbout": ["React", "Next.js", "JavaScript", "React Native", "Front-End Development", "SEO"]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Karim Karam",
+        "url": "https://karimkaram.netlify.app",
+        "image": "https://karimkaram.netlify.app/images/karim.png",
+        "sameAs": [
+          "https://www.linkedin.com/in/karim-karam-33a36b174/",
+          "https://github.com/Karim-Karam"
+        ],
+        "jobTitle": "Front-End Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Arcon"
+        },
+        "knowsAbout": [
+          "React",
+          "Next.js",
+          "JavaScript",
+          "React Native",
+          "Front-End Development",
+          "SEO"
+        ]
+      }
     </script>
 
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Bungee&family=Orelega+One&family=Smooch+Sans:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Zeyada&family=Monoton&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style/custom.css">
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Orelega+One&family=Smooch+Sans:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Zeyada&family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style/custom.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/tailwind-config.js"></script>
 
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  </head>
 
-</head>
-
-<body class="bg-black text-white font-sans">
+  <body class="bg-black text-white font-sans">
     <div class="mx-[5%] md:mx-[10%]">
-        <header class="flex w-full justify-between py-4 ">
-            <a class="cursor-pointer text-4xl bg-[#2749F5] rounded-[10%] ps-1 py-2 font-bold font-fancy">K<span
-                    class="bg-red-500 rounded-[10%] px-1 font-fancy">K</span></a>
-            <a href="#contact"
-                class="border-2 px-4 py-3  rounded-[8px]   transition duration-300 ease-in-out font-bold">Hire
-                Me</a>
-        </header>
+      <header class="flex w-full justify-between py-4">
+        <a
+          class="cursor-pointer text-4xl bg-[#2749F5] rounded-[10%] ps-1 py-2 font-bold font-fancy"
+          >K<span class="bg-red-500 rounded-[10%] px-1 font-fancy">K</span></a
+        >
+        <a
+          href="#contact"
+          class="border-2 px-4 py-3 rounded-[8px] transition duration-300 ease-in-out font-bold"
+          >Hire Me</a
+        >
+      </header>
 
-        <main class="flex flex-col-reverse md:flex-row items-center min-h- md:items-center mt-10 gap-8">
-            <div class="md:w-1/2 text-center md:text-left" id="hero-text">
-                <h1 class="text-5xl md:text-6xl font-bold mb-4">
-                    Hi, I'm <span class="">Karim Karam</span>
-                </h1>
+      <main
+        class="flex flex-col-reverse md:flex-row items-center min-h- md:items-center mt-10 gap-8"
+      >
+        <div class="md:w-1/2 text-center md:text-left" id="hero-text">
+          <h1 class="text-5xl md:text-6xl font-bold mb-4">
+            Hi, I'm <span class="">Karim Karam</span>
+          </h1>
 
-                <div class="text-3xl md:text-4xl font-semibold mb-6 h-16 ">
-                    <span class="text-[#f1f1f1]">I'm a </span>
-                    <span id="typing-text" class="text-red-500"></span>
-                    <span class="animate-pulse">|</span>
-                </div>
+          <div class="text-3xl md:text-4xl font-semibold mb-6 h-16">
+            <span class="text-[#f1f1f1]">I'm a </span>
+            <span id="typing-text" class="text-red-500"></span>
+            <span class="animate-pulse">|</span>
+          </div>
 
-                <div class="social-icons mb-8 space-x-5 flex justify-center md:justify-start">
-                    <a href="https://www.linkedin.com/in/karim-karam-33a36b174/" target="_blank"
-                        class="text-gray-300 hover:text-blue-500 transition duration-300">
-                        <i class="fab fa-linkedin text-3xl"></i>
-                    </a>
-                    <a href="https://github.com/Karim-Karam" target="_blank"
-                        class="text-gray-300 hover:text-white transition duration-300">
-                        <i class="fab fa-github text-3xl"></i>
-                    </a>
-                    <a href="mailto:karamkarim454@gmail.com"
-                        class="text-gray-300 hover:text-red-500 transition duration-300">
-                        <i class="fas fa-envelope text-3xl"></i>
-                    </a>
-                    <a href="https://wa.me/201092350393" target="_blank"
-                        class="text-gray-300 hover:text-green-500 transition duration-300">
-                        <i class="fab fa-whatsapp text-3xl"></i>
-                    </a>
-                </div>
-                <div class="space-x-4 flex justify-center md:justify-start">
-                    <a href="#projects"
-                        class="border-2 px-4 py-2 rounded-[8px] hover:border-blue-700 hover:bg-blue-700 transition duration-300 ease-in-out font-bold">View
-                        Projects</a>
-                    <a href="https://drive.usercontent.google.com/download?id=1mY-c5gmaRpCTjSDenZEGnciQTj1tQwBr&export=download&authuser=0&confirm=t&uuid=063fdda5-a6bb-48a7-b341-8b550d1a8971&at=APcXIO04hsnimRuG_RKF3fv8EP7h:1770429687146"
-                        class="bg-red-500 border-2 border-red-500 px-4 py-2 rounded-[8px] hover:bg-red-700 transition duration-300 ease-in-out font-bold">Download
-                        CV</a>
-                </div>
-            </div>
-            <div class="md:w-1/2" id="hero-image">
-                <img src="/images/karim.png" alt="Karam's Photo" class="rounded-lg shadow-lg w-full">
-            </div>
-        </main>
+          <div
+            class="social-icons mb-8 space-x-5 flex justify-center md:justify-start"
+          >
+            <a
+              href="https://www.linkedin.com/in/karim-karam-33a36b174/"
+              target="_blank"
+              class="text-gray-300 hover:text-blue-500 transition duration-300"
+            >
+              <i class="fab fa-linkedin text-3xl"></i>
+            </a>
+            <a
+              href="https://github.com/Karim-Karam"
+              target="_blank"
+              class="text-gray-300 hover:text-white transition duration-300"
+            >
+              <i class="fab fa-github text-3xl"></i>
+            </a>
+            <a
+              href="mailto:karamkarim454@gmail.com"
+              class="text-gray-300 hover:text-red-500 transition duration-300"
+            >
+              <i class="fas fa-envelope text-3xl"></i>
+            </a>
+            <a
+              href="https://wa.me/201092350393"
+              target="_blank"
+              class="text-gray-300 hover:text-green-500 transition duration-300"
+            >
+              <i class="fab fa-whatsapp text-3xl"></i>
+            </a>
+          </div>
+          <div class="space-x-4 flex justify-center md:justify-start">
+            <a
+              href="#projects"
+              class="border-2 px-4 py-2 rounded-[8px] hover:border-blue-700 hover:bg-blue-700 transition duration-300 ease-in-out font-bold"
+              >View Projects</a
+            >
+            <a
+              href="https://drive.usercontent.google.com/download?id=1mY-c5gmaRpCTjSDenZEGnciQTj1tQwBr&export=download&authuser=0&confirm=t&uuid=063fdda5-a6bb-48a7-b341-8b550d1a8971&at=APcXIO04hsnimRuG_RKF3fv8EP7h:1770429687146"
+              class="bg-red-500 border-2 border-red-500 px-4 py-2 rounded-[8px] hover:bg-red-700 transition duration-300 ease-in-out font-bold"
+              >Download CV</a
+            >
+          </div>
+        </div>
+        <div class="md:w-1/2" id="hero-image">
+          <img
+            src="/images/karim.png"
+            alt="Karam's Photo"
+            class="rounded-lg shadow-lg w-full"
+          />
+        </div>
+      </main>
 
-        <section id="about" class="mt-20">
-            <h2 class="text-4xl font-bold mb-6 text-center">About Me</h2>
-            <p class="text-lg leading-relaxed text-justify">
-                I am a passionate and results-driven Front-End Developer specializing in the modern React ecosystem. I
-                focus on translating complex design requirements into intuitive, high-performance user interfaces by
-                engineering dynamic and reusable UI components.
+      <section id="about" class="mt-20">
+        <h2 class="text-4xl font-bold mb-6 text-center">About Me</h2>
+        <p class="text-lg leading-relaxed text-justify">
+          I am a passionate and results-driven Front-End Developer specializing
+          in the modern React ecosystem. I focus on translating complex design
+          requirements into intuitive, high-performance user interfaces by
+          engineering dynamic and reusable UI components. I leverage Next.js as
+          my primary framework to build production-ready, scalable web
+          applications. My expertise includes architecting solutions that
+          utilize Server-Side Rendering (SSR) and Static Site Generation (SSG)
+          to ensure superior speed, optimal SEO, and a top-tier user experience.
+          Whether it’s advanced state management, performance tuning, or
+          integrating API routes, I am committed to writing clean, maintainable,
+          and efficient code that delivers measurable business results.
+        </p>
+      </section>
 
-                I leverage Next.js as my primary framework to build production-ready, scalable web applications. My
-                expertise includes architecting solutions that utilize Server-Side Rendering (SSR) and Static Site
-                Generation (SSG) to ensure superior speed, optimal SEO, and a top-tier user experience. Whether it’s
-                advanced state management, performance tuning, or integrating API routes, I am committed to writing
-                clean, maintainable, and efficient code that delivers measurable business results.
+      <section id="services" class="mt-20 text-white">
+        <h2 class="text-4xl font-bold mb-10 text-center">What I Offer</h2>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
+        >
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:bg-gray-700 transition duration-300"
+          >
+            <i class="fas fa-tachometer-alt text-4xl text-blue-500 mb-4"></i>
+            <h3 class="text-2xl font-bold mb-3">Performance & Optimization</h3>
+            <p class="text-gray-400">
+              I fine-tune web applications using **Next.js** SSR/SSG and deep
+              **React** performance profiling to achieve blazing-fast load times
+              and a perfect Core Web Vitals score.
             </p>
-        </section>
+          </div>
 
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:bg-gray-700 transition duration-300"
+          >
+            <i class="fas fa-mobile-alt text-4xl text-blue-500 mb-4"></i>
+            <h3 class="text-2xl font-bold mb-3">
+              Responsive UI/UX Development
+            </h3>
+            <p class="text-gray-400">
+              Crafting interfaces that look flawless on any device. I focus on
+              highly accessible, component-driven design that guarantees a
+              smooth user experience.
+            </p>
+          </div>
 
-        <section id="services" class="mt-20 text-white">
-            <h2 class="text-4xl font-bold mb-10 text-center">What I Offer</h2>
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:bg-gray-700 transition duration-300"
+          >
+            <i class="fas fa-react text-4xl text-blue-500 mb-4"></i>
+            <h3 class="text-2xl font-bold mb-3">Mobile App Development</h3>
+            <p class="text-gray-400">
+              Building native-quality iOS and Android applications using **React
+              Native**. I create cross-platform solutions that share code logic
+              for faster delivery.
+            </p>
+          </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:bg-gray-700 transition duration-300"
+          >
+            <i class="fas fa-graduation-cap text-4xl text-blue-500 mb-4"></i>
+            <h3 class="text-2xl font-bold mb-3">LMS (E-Learning) Systems</h3>
+            <p class="text-gray-400">
+              Developing custom Learning Management Systems (LMS) with robust
+              features for content delivery, student tracking, and user
+              authentication.
+            </p>
+          </div>
 
-                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:bg-gray-700 transition duration-300">
-                    <i class="fas fa-tachometer-alt text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="text-2xl font-bold mb-3">Performance & Optimization</h3>
-                    <p class="text-gray-400">
-                        I fine-tune web applications using **Next.js** SSR/SSG and deep **React** performance profiling
-                        to achieve blazing-fast load times and a perfect Core Web Vitals score.
-                    </p>
-                </div>
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:bg-gray-700 transition duration-300"
+          >
+            <i class="fas fa-notes-medical text-4xl text-blue-500 mb-4"></i>
+            <h3 class="text-2xl font-bold mb-3">
+              Medical & Healthcare Systems
+            </h3>
+            <p class="text-gray-400">
+              Creating secure, data-driven platforms for patient management,
+              appointment scheduling, and electronic health records (EHR)
+              compliance.
+            </p>
+          </div>
 
-                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:bg-gray-700 transition duration-300">
-                    <i class="fas fa-mobile-alt text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="text-2xl font-bold mb-3">Responsive UI/UX Development</h3>
-                    <p class="text-gray-400">
-                        Crafting interfaces that look flawless on any device. I focus on highly accessible,
-                        component-driven design that guarantees a smooth user experience.
-                    </p>
-                </div>
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:bg-gray-700 transition duration-300"
+          >
+            <i class="fas fa-user-shield text-4xl text-blue-500 mb-4"></i>
+            <h3 class="text-2xl font-bold mb-3">Admin Panel Development</h3>
+            <p class="text-gray-400">
+              Building powerful, intuitive dashboards and back-office tools for
+              data visualization, user moderation, and full system control.
+            </p>
+          </div>
 
-                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:bg-gray-700 transition duration-300">
-                    <i class="fas fa-react text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="text-2xl font-bold mb-3">Mobile App Development</h3>
-                    <p class="text-gray-400">
-                        Building native-quality iOS and Android applications using **React Native**. I create
-                        cross-platform solutions that share code logic for faster delivery.
-                    </p>
-                </div>
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:bg-gray-700 transition duration-300"
+          >
+            <i class="fas fa-shopping-cart text-4xl text-blue-500 mb-4"></i>
+            <h3 class="text-2xl font-bold mb-3">E-commerce Platforms</h3>
+            <p class="text-gray-400">
+              Developing fast, headless e-commerce frontends with Next.js,
+              integrating seamlessly with platforms like Shopify or custom APIs
+              for high conversion rates.
+            </p>
+          </div>
 
-                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:bg-gray-700 transition duration-300">
-                    <i class="fas fa-graduation-cap text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="text-2xl font-bold mb-3">LMS (E-Learning) Systems</h3>
-                    <p class="text-gray-400">
-                        Developing custom Learning Management Systems (LMS) with robust features for content delivery,
-                        student tracking, and user authentication.
-                    </p>
-                </div>
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:bg-gray-700 transition duration-300"
+          >
+            <i class="fas fa-desktop text-4xl text-blue-500 mb-4"></i>
+            <h3 class="text-2xl font-bold mb-3">Desktop Application UI</h3>
+            <p class="text-gray-400">
+              Designing and implementing custom, cross-platform user interfaces
+              for desktop applications, often using technologies like Electron
+              or similar wrappers.
+            </p>
+          </div>
+        </div>
+      </section>
 
-                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:bg-gray-700 transition duration-300">
-                    <i class="fas fa-notes-medical text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="text-2xl font-bold mb-3">Medical & Healthcare Systems</h3>
-                    <p class="text-gray-400">
-                        Creating secure, data-driven platforms for patient management, appointment scheduling, and
-                        electronic health records (EHR) compliance.
-                    </p>
-                </div>
+      <section id="projects" class="mt-20">
+        <h2 class="text-4xl font-bold mb-4 text-center">My Projects</h2>
+        <p class="text-center text-gray-400 mb-10">
+          Click on a technology to filter or on a card to see details.
+        </p>
 
-                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:bg-gray-700 transition duration-300">
-                    <i class="fas fa-user-shield text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="text-2xl font-bold mb-3">Admin Panel Development</h3>
-                    <p class="text-gray-400">
-                        Building powerful, intuitive dashboards and back-office tools for data visualization, user
-                        moderation, and full system control.
-                    </p>
-                </div>
+        <div
+          id="filter-buttons"
+          class="flex flex-wrap justify-center gap-2 mb-12"
+        ></div>
 
-                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:bg-gray-700 transition duration-300">
-                    <i class="fas fa-shopping-cart text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="text-2xl font-bold mb-3">E-commerce Platforms</h3>
-                    <p class="text-gray-400">
-                        Developing fast, headless e-commerce frontends with Next.js, integrating seamlessly with
-                        platforms like Shopify or custom APIs for high conversion rates.
-                    </p>
-                </div>
+        <div
+          id="projects-grid"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        ></div>
+      </section>
 
-                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:bg-gray-700 transition duration-300">
-                    <i class="fas fa-desktop text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="text-2xl font-bold mb-3">Desktop Application UI</h3>
-                    <p class="text-gray-400">
-                        Designing and implementing custom, cross-platform user interfaces for desktop applications,
-                        often using technologies like Electron or similar wrappers.
-                    </p>
-                </div>
+      <div
+        id="project-modal"
+        class="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden"
+      >
+        <div
+          id="modal-content"
+          class="bg-gray-800 rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col relative transform scale-95 transition-transform duration-300"
+        >
+          <button
+            id="modal-close-btn"
+            class="absolute -top-4 -right-4 text-white bg-red-500 rounded-full w-10 h-10 flex items-center justify-center text-2xl z-10 hover:bg-red-600 transition-colors"
+          >
+            &times;
+          </button>
+        </div>
+      </div>
 
-            </div>
-        </section>
-
-        <section id="projects" class="mt-20">
-            <h2 class="text-4xl font-bold mb-4 text-center">My Projects</h2>
-            <p class="text-center text-gray-400 mb-10">Click on a technology to filter or on a card to see details.</p>
-
-            <div id="filter-buttons" class="flex flex-wrap justify-center gap-2 mb-12">
-            </div>
-
-            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            </div>
-        </section>
-
-        <div id="project-modal"
-            class="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-            <div id="modal-content"
-                class="bg-gray-800 rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col relative transform scale-95 transition-transform duration-300">
-                <button id="modal-close-btn"
-                    class="absolute -top-4 -right-4 text-white bg-red-500 rounded-full w-10 h-10 flex items-center justify-center text-2xl z-10 hover:bg-red-600 transition-colors">
-                    &times;
-                </button>
-            </div>
+      <section id="skills" class="py-20 sm:py-24 text-white">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+          <h2 class="text-4xl font-bold mb-4">Technologies I Work With</h2>
+          <p class="text-lg text-gray-400">
+            A showcase of my favorite tools and technologies.
+          </p>
         </div>
 
-        <section id="skills" class="py-20 sm:py-24 text-white">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-                <h2 class="text-4xl  font-bold mb-4">Technologies I Work With</h2>
-                <p class="text-lg text-gray-400">A showcase of my favorite tools and technologies.</p>
-            </div>
+        <div
+          id="skills-slider-container"
+          class="relative w-full max-w-7xl mx-auto mt-16"
+        >
+          <div id="skills-slider" class="overflow-hidden">
+            <div id="skills-track" class="flex gap-4"></div>
+          </div>
 
-            <div id="skills-slider-container" class="relative w-full max-w-7xl mx-auto mt-16">
-                <div id="skills-slider" class="overflow-hidden">
-                    <div id="skills-track" class="flex gap-4">
-                    </div>
+          <button id="prev-btn" class="slider-nav-btn hidden left-0 md:-left-6">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button
+            id="next-btn"
+            class="slider-nav-btn hidden right-0 md:-right-6"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <section id="experience" class="py-20 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 class="text-center text-4xl font-bold text-white mb-4">
+            Work Experience
+          </h2>
+          <p class="text-center text-lg text-gray-400 mb-16">
+            My professional journey so far.
+          </p>
+
+          <div class="relative">
+            <!-- Vertical Line -->
+            <div
+              class="absolute left-4 md:left-1/2 w-0.5 h-full bg-gray-700 transform md:-translate-x-1/2"
+            ></div>
+
+            <!-- Item 1: Anasco (Left) -->
+            <div
+              class="mb-12 flex flex-col md:flex-row items-center w-full relative group"
+            >
+              <!-- Dot -->
+              <div
+                class="absolute left-4 md:left-1/2 w-9 h-9 rounded-full bg-gray-900 border-4 border-blue-500 z-10 transform -translate-x-1/2 flex items-center justify-center group-hover:border-red-500 transition-colors duration-300"
+              >
+                <div
+                  class="w-3 h-3 bg-blue-500 rounded-full group-hover:bg-red-500 transition-colors duration-300"
+                ></div>
+              </div>
+
+              <!-- Content (Left) -->
+              <div class="w-full md:w-1/2 pl-12 md:pl-0 md:pr-12">
+                <div
+                  class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 relative"
+                >
+                  <!-- Arrow -->
+                  <div
+                    class="hidden md:block absolute top-6 -right-2.5 w-5 h-5 bg-gray-800 border-t border-r border-gray-700 transform rotate-45 group-hover:border-blue-500 transition-colors duration-300 z-0"
+                  ></div>
+
+                  <h3 class="text-xl font-bold text-white mb-1">
+                    Front-End Developer & Team Lead
+                  </h3>
+                  <p class="text-blue-400 font-semibold mb-1">
+                    Anasco International Group
+                  </p>
+                  <p class="text-gray-500 text-sm mb-3">
+                    Dec 2025 – Present | Remote
+                  </p>
+                  <ul
+                    class="text-gray-400 list-disc list-inside space-y-2 text-sm text-justify"
+                  >
+                    <li>
+                      Architected and developed scalable LMS portals using
+                      Next.js and TypeScript, enabling seamless course
+                      management.
+                    </li>
+                    <li>
+                      Built complex, data-rich dashboards (Instructor & Student
+                      Panels) featuring real-time analytics using Recharts.
+                    </li>
+                    <li>
+                      Led the front-end team by defining technical roadmaps and
+                      conducting code reviews to ensure code quality.
+                    </li>
+                    <li>
+                      Collaborated with Backend Developers to streamline
+                      workflows and ensure on-time delivery.
+                    </li>
+                  </ul>
                 </div>
+              </div>
 
-                <button id="prev-btn" class="slider-nav-btn hidden left-0 md:-left-6">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button id="next-btn" class="slider-nav-btn hidden right-0 md:-right-6">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
+              <!-- Spacer (Right) -->
+              <div class="hidden md:block md:w-1/2"></div>
             </div>
-        </section>
 
-        <section id="experience" class="py-20">
-            <div class="max-w-4xl mx-auto px-4">
-                <h2 class="text-center text-4xl font-bold text-white mb-4">Work Experience</h2>
-                <p class="text-center text-lg text-gray-400 mb-12">My professional journey so far.</p>
+            <!-- Item 2: Arcon (Right) -->
+            <div
+              class="mb-12 flex flex-col md:flex-row items-center w-full relative group"
+            >
+              <!-- Dot -->
+              <div
+                class="absolute left-4 md:left-1/2 w-9 h-9 rounded-full bg-gray-900 border-4 border-blue-500 z-10 transform -translate-x-1/2 flex items-center justify-center group-hover:border-red-500 transition-colors duration-300"
+              >
+                <div
+                  class="w-3 h-3 bg-blue-500 rounded-full group-hover:bg-red-500 transition-colors duration-300"
+                ></div>
+              </div>
 
-                <div class="relative">
-                    <div class="absolute left-4 md:left-1/2 w-0.5 h-full bg-gray-700"></div>
+              <!-- Spacer (Left) -->
+              <div class="hidden md:block md:w-1/2"></div>
 
-                    <div class="mb-8 flex justify-center md:justify-normal md:odd:flex-row-reverse group">
-                        <div class="flex items-center w-full">
-                            <div
-                                class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10 group-hover:bg-red-500 transition-colors">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <div
-                                class="bg-gray-800 rounded-lg shadow-xl p-6 w-full md:w-5/12 ml-4 md:ml-0 md:group-odd:ml-auto md:group-even:mr-auto">
-                                <h3 class="text-xl font-bold text-white mb-1">Front-End Developer</h3>
-                                <p class="text-blue-400 font-semibold mb-2">Arcon. | 2023 - Present</p>
-                                <ul class="text-gray-400  list-inside space-y-1">
-                                    <li class="text-justify">As a Front-End Developer specializing in React and Next.js,
-                                        I design, develop,
-                                        and maintain
-                                        responsive web applications, including LMS and medical platforms, collaborating
-                                        with
-                                        cross-functional teams to deliver user-centric,high-performance solutions.</li>
+              <!-- Content (Right) -->
+              <div class="w-full md:w-1/2 pl-12 md:pl-12">
+                <div
+                  class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 relative"
+                >
+                  <!-- Arrow -->
+                  <div
+                    class="hidden md:block absolute top-6 -left-2.5 w-5 h-5 bg-gray-800 border-b border-l border-gray-700 transform rotate-45 group-hover:border-blue-500 transition-colors duration-300 z-0"
+                  ></div>
 
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-8 flex justify-center md:justify-normal md:odd:flex-row-reverse group">
-                        <div class="flex items-center w-full">
-                            <div
-                                class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10 group-hover:bg-red-500 transition-colors">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <div
-                                class="bg-gray-800 rounded-lg shadow-xl p-6 w-full md:w-5/12 ml-4 md:ml-0 md:group-odd:ml-auto md:group-even:mr-auto">
-                                <h3 class="text-xl font-bold text-white mb-1">Freelance Full-Stack Developer</h3>
-                                <ul class="text-gray-400  list-inside space-y-1">
-                                    <li class="text-justify">Developed a customizable Arabic-language dashboard using
-                                        Next.js (React) and
-                                        Firebase
-                                        to manage customer data and dynamic questionnaires, later integrated into a
-                                        Unity-based
-                                        game.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-8 flex justify-center md:justify-normal md:odd:flex-row-reverse group">
-                        <div class="flex items-center w-full">
-                            <div
-                                class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10 group-hover:bg-red-500 transition-colors">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <div
-                                class="bg-gray-800 rounded-lg shadow-xl p-6 w-full md:w-5/12 ml-4 md:ml-0 md:group-odd:ml-auto md:group-even:mr-auto">
-                                <h3 class="text-xl font-bold text-white mb-1">Officer</h3>
-                                <p class="text-blue-400 font-semibold mb-2">Egyptian Army | 2020 - 2022</p>
-                                <ul class="text-gray-400  list-inside space-y-1">
-                                    <li class="text-justify">Served as an officer in the Egyptian Army, leading and
-                                        managing teams in
-                                        high-pressure
-                                        environments. Gained expertise in strategic planning, operations, discipline,
-                                        and teamwork
-                                        while ensuring mission success and maintaining security and efficiency in
-                                        military operations.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                  <h3 class="text-xl font-bold text-white mb-1">
+                    Front End Developer
+                  </h3>
+                  <p class="text-blue-400 font-semibold mb-1">Arcon</p>
+                  <p class="text-gray-500 text-sm mb-1">Jan 2023 - Present</p>
+                  <p class="text-gray-500 text-xs mb-3">Hybrid / Remote</p>
+                  <ul
+                    class="text-gray-400 list-disc list-inside space-y-2 text-sm text-justify"
+                  >
+                    <li>
+                      Led the front-end lifecycle for LMS and medical web
+                      applications, utilizing Next.js and React.js.
+                    </li>
+                    <li>
+                      Engineered high-performance solutions with code-splitting
+                      and lazy loading to reduce load times.
+                    </li>
+                    <li>
+                      Translated complex design mockups into pixel-perfect,
+                      interactive web pages, prioritizing usability.
+                    </li>
+                    <li>
+                      Worked within Agile environments to align technical
+                      deliverables with product goals.
+                    </li>
+                  </ul>
                 </div>
+              </div>
             </div>
-        </section>
 
-        <section id="contact" class="py-20 text-center">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-white mb-4">Get In Touch</h2>
-                <p class="text-lg text-gray-400">Have a project in mind? I’d love to hear from you.</p>
-            </div>
-            <div class="max-w-4xl mx-auto bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl">
-                <h3 class="text-3xl font-bold text-white mb-4">Let's Connect</h3>
-                <p class="text-gray-400 max-w-lg mx-auto mb-10">
-                    I'm currently available for freelance work and open to new opportunities. Feel free to reach out via
-                    email or connect with me using the links below.
-                </p>
+            <!-- Item 3: Freelance (Left) -->
+            <div
+              class="mb-12 flex flex-col md:flex-row items-center w-full relative group"
+            >
+              <!-- Dot -->
+              <div
+                class="absolute left-4 md:left-1/2 w-9 h-9 rounded-full bg-gray-900 border-4 border-blue-500 z-10 transform -translate-x-1/2 flex items-center justify-center group-hover:border-red-500 transition-colors duration-300"
+              >
+                <div
+                  class="w-3 h-3 bg-blue-500 rounded-full group-hover:bg-red-500 transition-colors duration-300"
+                ></div>
+              </div>
 
-                <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
+              <!-- Content (Left) -->
+              <div class="w-full md:w-1/2 pl-12 md:pl-0 md:pr-12">
+                <div
+                  class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 relative"
+                >
+                  <!-- Arrow -->
+                  <div
+                    class="hidden md:block absolute top-6 -right-2.5 w-5 h-5 bg-gray-800 border-t border-r border-gray-700 transform rotate-45 group-hover:border-blue-500 transition-colors duration-300 z-0"
+                  ></div>
 
-                    <a href="mailto:karamkarim454@gmail.com" class="text-center group">
-                        <div
-                            class="bg-gray-900 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 border-2 border-transparent group-hover:border-red-500 transition-all">
-                            <i class="fas fa-envelope text-red-500 text-2xl"></i>
-                        </div>
-                        <p class="font-semibold text-white group-hover:text-red-400 transition-colors">Email Me</p>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/karim-karam-33a36b174/" target="_blank"
-                        class="text-center group">
-                        <div
-                            class="bg-gray-900 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 border-2 border-transparent group-hover:border-blue-500 transition-all">
-                            <i class="fab fa-linkedin text-blue-500 text-2xl"></i>
-                        </div>
-                        <p class="font-semibold text-white group-hover:text-blue-400 transition-colors">LinkedIn</p>
-                    </a>
-
-                    <a href="https://wa.me/201092350393" target="_blank" class="text-center group">
-                        <div
-                            class="bg-gray-900 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 border-2 border-transparent group-hover:border-green-500 transition-all">
-                            <i class="fab fa-whatsapp text-green-500 text-2xl"></i>
-                        </div>
-                        <p class="font-semibold text-white group-hover:text-green-400 transition-colors">WhatsApp</p>
-                    </a>
-
+                  <h3 class="text-xl font-bold text-white mb-1">
+                    Freelance Full-Stack Developer
+                  </h3>
+                  <p class="text-gray-500 text-sm mb-3">Apr 2025 - Jun 2025</p>
+                  <ul
+                    class="text-gray-400 list-disc list-inside space-y-2 text-sm text-justify"
+                  >
+                    <li>
+                      Developed a customizable Arabic-language dashboard using
+                      Next.js and Firebase to manage customer data and dynamic
+                      questionnaires for a Unity-based game.
+                    </li>
+                  </ul>
                 </div>
-            </div>
-        </section>
+              </div>
 
+              <!-- Spacer (Right) -->
+              <div class="hidden md:block md:w-1/2"></div>
+            </div>
+
+            <!-- Item 4: Officer (Right) -->
+            <div
+              class="mb-12 flex flex-col md:flex-row items-center w-full relative group"
+            >
+              <!-- Dot -->
+              <div
+                class="absolute left-4 md:left-1/2 w-9 h-9 rounded-full bg-gray-900 border-4 border-blue-500 z-10 transform -translate-x-1/2 flex items-center justify-center group-hover:border-red-500 transition-colors duration-300"
+              >
+                <div
+                  class="w-3 h-3 bg-blue-500 rounded-full group-hover:bg-red-500 transition-colors duration-300"
+                ></div>
+              </div>
+
+              <!-- Spacer (Left) -->
+              <div class="hidden md:block md:w-1/2"></div>
+
+              <!-- Content (Right) -->
+              <div class="w-full md:w-1/2 pl-12 md:pl-12">
+                <div
+                  class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 relative"
+                >
+                  <!-- Arrow -->
+                  <div
+                    class="hidden md:block absolute top-6 -left-2.5 w-5 h-5 bg-gray-800 border-b border-l border-gray-700 transform rotate-45 group-hover:border-blue-500 transition-colors duration-300 z-0"
+                  ></div>
+
+                  <h3 class="text-xl font-bold text-white mb-1">Officer</h3>
+                  <p class="text-blue-400 font-semibold mb-1">Egyptian Army</p>
+                  <p class="text-gray-500 text-sm mb-3">Apr 2020 - Oct 2022</p>
+                  <ul
+                    class="text-gray-400 list-disc list-inside space-y-2 text-sm text-justify"
+                  >
+                    <li>
+                      Leading and managing teams in high-pressure environments.
+                    </li>
+                    <li>
+                      Strategic planning, operations, discipline, and teamwork
+                      while ensuring mission success.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-20 text-center">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-white mb-4">Get In Touch</h2>
+          <p class="text-lg text-gray-400">
+            Have a project in mind? I’d love to hear from you.
+          </p>
+        </div>
+        <div
+          class="max-w-4xl mx-auto bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl"
+        >
+          <h3 class="text-3xl font-bold text-white mb-4">Let's Connect</h3>
+          <p class="text-gray-400 max-w-lg mx-auto mb-10">
+            I'm currently available for freelance work and open to new
+            opportunities. Feel free to reach out via email or connect with me
+            using the links below.
+          </p>
+
+          <div
+            class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12"
+          >
+            <a href="mailto:karamkarim454@gmail.com" class="text-center group">
+              <div
+                class="bg-gray-900 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 border-2 border-transparent group-hover:border-red-500 transition-all"
+              >
+                <i class="fas fa-envelope text-red-500 text-2xl"></i>
+              </div>
+              <p
+                class="font-semibold text-white group-hover:text-red-400 transition-colors"
+              >
+                Email Me
+              </p>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/karim-karam-33a36b174/"
+              target="_blank"
+              class="text-center group"
+            >
+              <div
+                class="bg-gray-900 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 border-2 border-transparent group-hover:border-blue-500 transition-all"
+              >
+                <i class="fab fa-linkedin text-blue-500 text-2xl"></i>
+              </div>
+              <p
+                class="font-semibold text-white group-hover:text-blue-400 transition-colors"
+              >
+                LinkedIn
+              </p>
+            </a>
+
+            <a
+              href="https://wa.me/201092350393"
+              target="_blank"
+              class="text-center group"
+            >
+              <div
+                class="bg-gray-900 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 border-2 border-transparent group-hover:border-green-500 transition-all"
+              >
+                <i class="fab fa-whatsapp text-green-500 text-2xl"></i>
+              </div>
+              <p
+                class="font-semibold text-white group-hover:text-green-400 transition-colors"
+              >
+                WhatsApp
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
     <footer class="bg-gray-900 text-white py-8 mt-20">
-        <div class="mx-[5%] md:mx-[10%]">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <a class="cursor-pointer text-4xl bg-[#2749F5] rounded-[10%] ps-1 py-2 font-bold font-fancy">K<span
-                        class="bg-red-500 rounded-[10%] px-1 font-fancy">K</span></a>
-                <p class="text-gray-400 text-center">&copy; 2025 Karim Karam. All rights reserved.</p>
-                <div class="social-icons space-x-5 flex">
-                    <a href="https://www.linkedin.com/in/karim-karam-33a36b174/" target="_blank"
-                        class="text-gray-400 hover:text-blue-500 transition duration-300"><i
-                            class="fab fa-linkedin text-2xl"></i></a>
-                    <a href="https://github.com/Karim-Karam" target="_blank"
-                        class="text-gray-400 hover:text-white transition duration-300"><i
-                            class="fab fa-github text-2xl"></i></a>
-                    <a href="mailto:karamkarim454@gmail.com"
-                        class="text-gray-400 hover:text-red-500 transition duration-300"><i
-                            class="fas fa-envelope text-2xl"></i></a>
-                    <a href="https://wa.me/201092350393" target="_blank"
-                        class="text-gray-400 hover:text-green-500 transition duration-300"><i
-                            class="fab fa-whatsapp text-2xl"></i></a>
-                </div>
-            </div>
+      <div class="mx-[5%] md:mx-[10%]">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <a
+            class="cursor-pointer text-4xl bg-[#2749F5] rounded-[10%] ps-1 py-2 font-bold font-fancy"
+            >K<span class="bg-red-500 rounded-[10%] px-1 font-fancy">K</span></a
+          >
+          <p class="text-gray-400 text-center">
+            &copy; 2025 Karim Karam. All rights reserved.
+          </p>
+          <div class="social-icons space-x-5 flex">
+            <a
+              href="https://www.linkedin.com/in/karim-karam-33a36b174/"
+              target="_blank"
+              class="text-gray-400 hover:text-blue-500 transition duration-300"
+              ><i class="fab fa-linkedin text-2xl"></i
+            ></a>
+            <a
+              href="https://github.com/Karim-Karam"
+              target="_blank"
+              class="text-gray-400 hover:text-white transition duration-300"
+              ><i class="fab fa-github text-2xl"></i
+            ></a>
+            <a
+              href="mailto:karamkarim454@gmail.com"
+              class="text-gray-400 hover:text-red-500 transition duration-300"
+              ><i class="fas fa-envelope text-2xl"></i
+            ></a>
+            <a
+              href="https://wa.me/201092350393"
+              target="_blank"
+              class="text-gray-400 hover:text-green-500 transition duration-300"
+              ><i class="fab fa-whatsapp text-2xl"></i
+            ></a>
+          </div>
         </div>
+      </div>
     </footer>
 
-
     <script>
-        const roles = [
-            "Front End Developer",
-            "React.js Developer",
-            "Next.js Developer",
-            "React Native Developer"
-        ];
-        const typingTextElement = document.getElementById('typing-text');
-        let roleIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
+      const roles = [
+        "Front End Developer",
+        "React.js Developer",
+        "Next.js Developer",
+        "React Native Developer",
+      ];
+      const typingTextElement = document.getElementById("typing-text");
+      let roleIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
 
-        function type() {
-            const currentRole = roles[roleIndex];
-            let displayText = currentRole.substring(0, charIndex);
-            typingTextElement.textContent = displayText;
+      function type() {
+        const currentRole = roles[roleIndex];
+        let displayText = currentRole.substring(0, charIndex);
+        typingTextElement.textContent = displayText;
 
-            if (!isDeleting) {
-                // Typing
-                if (charIndex < currentRole.length) {
-                    charIndex++;
-                    setTimeout(type, 100); // Speed of typing
-                } else {
-                    // Done typing, start deleting after a pause
-                    isDeleting = true;
-                    setTimeout(type, 5000); // Pause before deleting
-                }
-            } else {
-                // Deleting
-                if (charIndex > 0) {
-                    charIndex--;
-                    setTimeout(type, 50); // Speed of deleting
-                } else {
-                    // Done deleting, move to next role
-                    isDeleting = false;
-                    roleIndex = (roleIndex + 1) % roles.length;
-                    setTimeout(type, 500); // Pause before typing next word
-                }
-            }
+        if (!isDeleting) {
+          // Typing
+          if (charIndex < currentRole.length) {
+            charIndex++;
+            setTimeout(type, 100); // Speed of typing
+          } else {
+            // Done typing, start deleting after a pause
+            isDeleting = true;
+            setTimeout(type, 5000); // Pause before deleting
+          }
+        } else {
+          // Deleting
+          if (charIndex > 0) {
+            charIndex--;
+            setTimeout(type, 50); // Speed of deleting
+          } else {
+            // Done deleting, move to next role
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            setTimeout(type, 500); // Pause before typing next word
+          }
         }
+      }
 
-        // Start the animation
-        document.addEventListener('DOMContentLoaded', type);
+      // Start the animation
+      document.addEventListener("DOMContentLoaded", type);
     </script>
     <script defer src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
