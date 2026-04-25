@@ -206,7 +206,7 @@ function displayProjects(filter = "All") {
               <img src="${project.gallery?.[1] || project.image}" alt="${project.title} preview left" class="w-full h-full object-cover">
             </div>
             <div class="absolute h-[88%] w-[36%] bg-black border-[4px] border-blue-500/40 rounded-[2rem] shadow-2xl overflow-hidden z-10 group-hover:scale-105 transition-all duration-500">
-              <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[40%] h-4 bg-gray-800 rounded-b-xl z-10 hidden sm:block"></div>
+              <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[40%] h-2 bg-gray-800 rounded-b-xl z-10  sm:block"></div>
               <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover">
             </div>
             <div class="absolute h-[80%] w-[32%] bg-black border-[4px] border-gray-800 rounded-[2rem] shadow-xl overflow-hidden translate-x-16 rotate-[8deg] opacity-70 group-hover:opacity-90 transition-all duration-500">
@@ -349,12 +349,21 @@ function openModal(project) {
   } else if (project.gallery?.length) {
     if (isMobileGallery) {
       mediaElement = `
-            <div class="w-full h-full bg-gradient-to-b from-gray-900 to-black p-3 sm:p-4 flex flex-col">
+            <div class="w-full h-full bg-gradient-to-br from-gray-900 via-black to-blue-950/50 p-3 sm:p-4 flex flex-col">
                 <div class="flex-1 flex items-center justify-center overflow-hidden relative">
-                    <img src="${project.gallery[0]}" alt="${project.title} blurred background" class="absolute inset-0 w-full h-full object-cover opacity-15 blur-2xl scale-110" aria-hidden="true">
-                    <div class="relative h-[94%] w-[74%] sm:w-[52%] md:w-[38%] lg:w-[32%] max-w-[360px] rounded-[2.2rem] border-2 border-gray-500 bg-black/60 p-2 sm:p-2.5 shadow-2xl">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[42%] h-4 bg-gray-800 rounded-b-xl z-10"></div>
-                        <img id="modal-gallery-main" src="${project.gallery[0]}" alt="${project.title}" class="w-full h-full object-cover rounded-[1.8rem] transition-opacity duration-300">
+                    <div class="absolute -inset-8 bg-blue-600/10 blur-3xl"></div>
+
+                    <div class="absolute h-[82%] w-[150px] bg-black border-[4px] border-gray-800 rounded-[2rem] shadow-xl overflow-hidden -translate-x-16 rotate-[-8deg] opacity-70">
+                      <img src="${project.gallery[1] || project.gallery[0]}" alt="${project.title} preview left" class="w-full h-full object-cover" aria-hidden="true">
+                    </div>
+
+                    <div class="relative h-[90%] w-[150px] bg-black border-[4px] border-blue-500/40 rounded-[2rem] shadow-2xl overflow-hidden z-10">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[40%] h-2 bg-gray-800 rounded-b-xl z-10  sm:block"></div>
+                        <img id="modal-gallery-main" src="${project.gallery[0]}" alt="${project.title}" class="w-full h-full object-cover transition-opacity duration-300">
+                    </div>
+
+                    <div class="absolute h-[82%] w-[150px] bg-black border-[4px] border-gray-800 rounded-[2rem] shadow-xl overflow-hidden translate-x-16 rotate-[8deg] opacity-70">
+                      <img src="${project.gallery[2] || project.gallery[0]}" alt="${project.title} preview right" class="w-full h-full object-cover" aria-hidden="true">
                     </div>
                 </div>
                 <div class="mt-3 flex gap-2 overflow-x-auto justify-center pb-1">
@@ -397,8 +406,11 @@ function openModal(project) {
   }
 
   const mediaContainerClass = isMobileGallery
-    ? "w-full h-[68vh] sm:h-[74vh] max-h-[760px] bg-black rounded-t-xl overflow-hidden"
+    ? "w-full h-[62vh] sm:h-[66vh] lg:h-[70vh] max-h-[760px] bg-black rounded-t-xl overflow-hidden"
     : "w-full aspect-video bg-black rounded-t-xl overflow-hidden";
+
+  modalContent.classList.remove("max-w-4xl", "max-w-5xl");
+  modalContent.classList.add(isMobileGallery ? "max-w-5xl" : "max-w-4xl");
 
   const liveLinkButton = project.liveLink
     ? `<a href="${project.liveLink}" target="_blank" class="text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center justify-center"><i class="fas fa-external-link-alt mr-2"></i>Live Demo</a>`
@@ -494,6 +506,8 @@ function closeModal() {
   modal.classList.add("hidden");
   document.body.classList.remove("modal-open");
   modalContent.innerHTML = "";
+  modalContent.classList.remove("max-w-5xl");
+  modalContent.classList.add("max-w-4xl");
   modalGallery = [];
   modalGalleryIndex = 0;
 }
