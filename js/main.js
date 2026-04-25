@@ -339,10 +339,39 @@ function setModalGalleryImage(index) {
 
 // 4. MODAL LOGIC
 function openModal(project) {
-  const mediaElement = project.videoUrl
-    ? `<iframe class="w-full h-full" src="${project.videoUrl}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-    : project.gallery?.length
-      ? `
+  const isMobileGallery = Boolean(
+    project.isMobileApp && project.gallery?.length,
+  );
+  let mediaElement = "";
+
+  if (project.videoUrl) {
+    mediaElement = `<iframe class="w-full h-full" src="${project.videoUrl}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+  } else if (project.gallery?.length) {
+    if (isMobileGallery) {
+      mediaElement = `
+            <div class="w-full h-full bg-gradient-to-b from-gray-900 to-black p-3 sm:p-4 flex flex-col">
+                <div class="flex-1 flex items-center justify-center overflow-hidden relative">
+                    <img src="${project.gallery[0]}" alt="${project.title} blurred background" class="absolute inset-0 w-full h-full object-cover opacity-15 blur-2xl scale-110" aria-hidden="true">
+                    <div class="relative h-[94%] w-[74%] sm:w-[52%] md:w-[38%] lg:w-[32%] max-w-[360px] rounded-[2.2rem] border-2 border-gray-500 bg-black/60 p-2 sm:p-2.5 shadow-2xl">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[42%] h-4 bg-gray-800 rounded-b-xl z-10"></div>
+                        <img id="modal-gallery-main" src="${project.gallery[0]}" alt="${project.title}" class="w-full h-full object-cover rounded-[1.8rem] transition-opacity duration-300">
+                    </div>
+                </div>
+                <div class="mt-3 flex gap-2 overflow-x-auto justify-center pb-1">
+                    ${project.gallery
+                      .map(
+                        (img, index) => `
+                        <button type="button" data-gallery-index="${index}" class="w-14 h-14 sm:w-16 sm:h-16 rounded-lg border border-gray-600 overflow-hidden transition-all duration-200 ${index === 0 ? "ring-2 ring-blue-500 opacity-100" : "opacity-70"}">
+                            <img src="${img}" alt="${project.title} screenshot ${index + 1}" class="w-full h-full object-cover">
+                        </button>
+                    `,
+                      )
+                      .join("")}
+                </div>
+            </div>
+            `;
+    } else {
+      mediaElement = `
             <div class="w-full h-full bg-gradient-to-b from-gray-900 to-black p-4 flex flex-col">
                 <div class="flex-1 flex items-center justify-center overflow-hidden">
                     <div class="h-full max-h-full rounded-[2rem] border border-gray-600 bg-black/40 p-2 shadow-xl">
@@ -361,8 +390,15 @@ function openModal(project) {
                       .join("")}
                 </div>
             </div>
-            `
-      : `<img src="${project.image}" alt="${project.title}" class="w-full h-full object-contain">`;
+            `;
+    }
+  } else {
+    mediaElement = `<img src="${project.image}" alt="${project.title}" class="w-full h-full object-contain">`;
+  }
+
+  const mediaContainerClass = isMobileGallery
+    ? "w-full h-[68vh] sm:h-[74vh] max-h-[760px] bg-black rounded-t-xl overflow-hidden"
+    : "w-full aspect-video bg-black rounded-t-xl overflow-hidden";
 
   const liveLinkButton = project.liveLink
     ? `<a href="${project.liveLink}" target="_blank" class="text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center justify-center"><i class="fas fa-external-link-alt mr-2"></i>Live Demo</a>`
@@ -413,7 +449,7 @@ function openModal(project) {
         </button>
         
         <!-- Media Section -->
-        <div class="w-full aspect-video bg-black rounded-t-xl overflow-hidden">
+        <div class="${mediaContainerClass}">
             ${mediaElement}
         </div>
         
