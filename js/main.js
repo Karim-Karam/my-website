@@ -17,7 +17,7 @@ const projectsData = [
     ],
     storeLinks: {
       playStore: "https://play.google.com/store/search?q=lxera&c=apps",
-      appStore: "https://apps.apple.com/us/search?term=lxera",
+      appStore: "https://apps.apple.com/us/app/lxera/id6760705667",
       appGallery: "https://appgallery.huawei.com/app/C117492299",
     },
     isMobileApp: true,
@@ -425,9 +425,9 @@ function openModal(project) {
       <span aria-disabled="true" title="Coming soon" class="cursor-not-allowed opacity-50 text-white bg-green-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center justify-center">
         <i class="fab fa-google-play mr-2"></i>Google Play
       </span>
-      <span aria-disabled="true" title="Coming soon" class="cursor-not-allowed opacity-50 text-white bg-slate-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center justify-center">
+      <a href="${project.storeLinks.appStore}" target="_blank" title="Coming soon" class="text-white bg-slate-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center justify-center">
         <i class="fab fa-app-store-ios mr-2"></i>App Store
-      </span>
+      </a>
       <a href="${project.storeLinks.appGallery}" target="_blank" class="text-white bg-red-600 hover:bg-red-700 transition-colors duration-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center justify-center gap-2">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M3 5.5A2.5 2.5 0 0 1 5.5 3h13A2.5 2.5 0 0 1 21 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 18.5zm4 2A1.5 1.5 0 1 0 7 10.5a1.5 1.5 0 0 0 0-3m10 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M7 13.5A1.5 1.5 0 1 0 7 16.5a1.5 1.5 0 0 0 0-3m10 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"/>
