@@ -2,9 +2,10 @@
 
 /* Style for the active filter button */
 .filter-btn.active {
-    background-color: #2749F5; /* Blue */
+    background-color: rgb(37 99 235 / 0.8); /* bg-blue-600/80 */
     color: white;
-    border-color: #2749F5;
+    border-color: rgb(59 130 246); /* border-blue-500 */
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
 }
 
 /* Prevent body scroll when modal is open */
