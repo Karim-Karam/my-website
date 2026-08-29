@@ -2,19 +2,24 @@
 const projectsData = [
   {
     id: 1,
+    title: "Coffee App",
+    description:
+      "I took a stunning UI/UX concept from Figma and built the entire application by hand—with a deliberate choice to avoid using any AI coding assistants.",
+    technologies: ["React Native", "Expo", "JavaScript"],
+    image: "images/projects/coffee.png",
+
+    isMobileApp: true,
+    videoUrl: "/videos/coffee-app.mp4",
+    liveLink: null,
+    repoLink: "https://github.com/Karim-Karam/coffeeApp",
+  },
+  {
+    id: 2,
     title: "LXERA App",
     description:
       "I developed LXERA from scratch using Expo (React Native) and successfully deployed it to Google Play, Apple App Store, and Huawei AppGallery.",
     technologies: ["React Native", "Expo", "JavaScript"],
-    image: "images/projects/lxeraApp/EN1.png",
-    gallery: [
-      "images/projects/lxeraApp/EN1.png",
-      "images/projects/lxeraApp/EN2.png",
-      "images/projects/lxeraApp/EN3.png",
-      "images/projects/lxeraApp/EN4.png",
-      "images/projects/lxeraApp/EN5.png",
-      "images/projects/lxeraApp/EN6.png",
-    ],
+    image: "images/projects/lxeraApp/image.png",
     storeLinks: {
       playStore: "https://play.google.com/store/search?q=lxera&c=apps",
       appStore: "https://apps.apple.com/us/app/lxera/id6760705667",
@@ -26,7 +31,7 @@ const projectsData = [
     repoLink: null,
   },
   {
-    id: 2,
+    id: 3,
     title: "Labs for Home",
     description:
       "LMS Portal designed for seamless course management, user engagement, and efficient learning.",
@@ -36,7 +41,7 @@ const projectsData = [
     liveLink: "https://lms.siminds.net/",
   },
   {
-    id: 3,
+    id: 4,
     title: "medyour portal",
     description:
       "A comprehensive Medical Portal designed to streamline healthcare access, offering seamless and personalized health management for users and corporate employees.",
@@ -47,7 +52,7 @@ const projectsData = [
     repoLink: null,
   },
   {
-    id: 4,
+    id: 5,
     title: "Apple Website Clone",
     description:
       "A responsive clone of the Apple website, replicating its design and functionality using React, GSAP, and Three js.",
@@ -58,7 +63,7 @@ const projectsData = [
     repoLink: "https://github.com/Karim-Karam/apple-website",
   },
   {
-    id: 5,
+    id: 6,
     title: "medyour Website",
     description:
       "A clean, responsive, and multi-language corporate website for Medyour, built using HTML, Tailwind CSS, and JavaScript. The site effectively showcases the company's services and provides key information to visitors.",
@@ -69,7 +74,7 @@ const projectsData = [
     repoLink: null,
   },
   {
-    id: 6,
+    id: 7,
     title: "Duroob Al-majd",
     description:
       "a customizable Arabic-language dashboard using Next.js (React) and Firebase to manage customer data and dynamic questionnaires, later integrated into a Unity-based game.",
@@ -80,7 +85,7 @@ const projectsData = [
     repoLink: null,
   },
   {
-    id: 7,
+    id: 8,
     title: "Siminds",
     description:
       "Siminds, a UK-based company, develops cutting-edge virtual reality and simulation solutions.",
@@ -91,7 +96,7 @@ const projectsData = [
     repoLink: "#",
   },
   {
-    id: 8,
+    id: 9,
     title: "Arcon",
     description:
       "Arcon delivers innovative solutions to enhance productivity and growth across sectors.",
@@ -102,7 +107,7 @@ const projectsData = [
     repoLink: null,
   },
   {
-    id: 9,
+    id: 10,
     title: "Movies App",
     description:
       "A movies site offering a vast collection of films with ratings, reviews, and trailers.",
@@ -113,7 +118,7 @@ const projectsData = [
     repoLink: null,
   },
   {
-    id: 10,
+    id: 11,
     title: "E-Commerce Site",
     description: "An e-commerce site with a user-friendly experience.",
     technologies: ["Bootstrap", "React.js"],
@@ -168,7 +173,7 @@ function displayProjects(filter = "All") {
   filteredProjects.forEach((project) => {
     const card = document.createElement("div");
     card.className =
-      "bg-gray-800/60 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.5)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.7)] hover:border-gray-600 overflow-hidden flex flex-col min-h-[520px] transform hover:-translate-y-2 transition-all duration-500 cursor-pointer group";
+      "project-card bg-gray-800/60 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.5)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.7)] hover:border-gray-600 overflow-hidden flex flex-col transform hover:-translate-y-2 transition-all duration-500 cursor-pointer group";
     const isMobileApp = Boolean(project.isMobileApp);
 
     // Create tech icons HTML
@@ -197,83 +202,45 @@ function displayProjects(filter = "All") {
       })
       .join("");
 
-    const projectMediaHtml = isMobileApp
-      ? `
-        <div class="flex-1 min-h-[320px] sm:min-h-[380px] bg-gradient-to-br from-indigo-900 via-purple-900/40 to-black overflow-hidden relative group/media flex items-center justify-center p-4">
-          <!-- Background Glow -->
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-blue-500/20 blur-[80px] rounded-full group-[&:hover]/media:bg-purple-500/30 transition-colors duration-700"></div>
-          
-          <!-- Staggered Gallery (No mobile frames) -->
-          <div class="relative w-full h-[90%] flex items-center justify-center gap-3 sm:gap-4 z-10 transform group-[&:hover]/media:scale-105 transition-transform duration-700 ease-out">
-            <!-- Left Image -->
-            <div class="h-[75%] w-[30%] rounded-xl shadow-lg overflow-hidden transform translate-y-6 group-[&:hover]/media:-translate-y-2 transition-transform duration-700 ease-out">
-              <img src="${project.gallery?.[1] || project.image}" alt="${project.title} screenshot 2" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-black/20 group-[&:hover]/media:bg-transparent transition-colors duration-500"></div>
-            </div>
-            
-            <!-- Center Main Image -->
-            <div class="h-[95%] w-[34%] rounded-xl shadow-2xl overflow-hidden z-10 border border-white/10 group-[&:hover]/media:-translate-y-4 transition-transform duration-700 ease-out">
-              <img src="${project.image}" alt="${project.title} screenshot 1" class="w-full h-full object-cover">
-            </div>
+    const projectMediaHtml = `
+      <div class="project-media flex-1 bg-gray-900 overflow-hidden relative group/media">
+          <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover object-top transition-transform duration-1000 group-[&:hover]/media:scale-110 opacity-90 group-[&:hover]/media:opacity-100">
 
-            <!-- Right Image -->
-            <div class="h-[75%] w-[30%] rounded-xl shadow-lg overflow-hidden transform -translate-y-6 group-[&:hover]/media:-translate-y-2 transition-transform duration-700 ease-out">
-              <img src="${project.gallery?.[2] || project.image}" alt="${project.title} screenshot 3" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-black/20 group-[&:hover]/media:bg-transparent transition-colors duration-500"></div>
-            </div>
-          </div>
-
-          <!-- Badges -->
           <div class="absolute top-4 left-4 flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/10 text-white text-[10px] uppercase font-bold tracking-wider px-3 py-1.5 rounded-full shadow-lg z-20">
-              <i class="fas fa-mobile-alt mr-1.5 text-[11px] text-blue-400"></i> App
+              <i class="fas ${isMobileApp ? "fa-mobile-alt" : "fa-desktop"} mr-1.5 text-[11px] ${isMobileApp ? "text-blue-400" : "text-purple-400"}"></i> ${isMobileApp ? "App" : "Web"}
           </div>
+
+          ${
+            isMobileApp
+              ? `
           <div class="absolute bottom-4 left-4 flex items-center justify-center gap-1.5 bg-black/60 backdrop-blur-md text-gray-200 text-[10px] uppercase font-bold tracking-wider px-3 py-1.5 rounded-full shadow-lg z-20 border border-gray-700/50">
             <img src="https://cdn.simpleicons.org/expo/ffffff" alt="Expo" class="w-3 h-3 rounded-sm opacity-80" />
             Expo
           </div>
-          <div class="absolute top-4 right-4 flex items-center justify-center bg-gray-900/80 backdrop-blur-md text-gray-300 text-[10px] uppercase font-bold tracking-wider px-3 py-1.5 rounded-full shadow-lg z-20 border border-gray-800">
-              ${project.gallery?.length || 1} <span class="ml-1 opacity-60">Screens</span>
-          </div>
+        
+          `
+              : ""
+          }
 
-          <!-- Hover Overlay -->
-          <div class="absolute inset-0 bg-gray-900/0 group-[&:hover]/media:bg-gray-900/40 transition-all duration-500 flex items-center justify-center backdrop-blur-[0px] group-[&:hover]/media:backdrop-blur-[2px] z-30 pointer-events-none"></div>
-          <div class="absolute inset-0 flex items-center justify-center z-40 pointer-events-none">
-              <div class="opacity-0 group-[&:hover]/media:opacity-100 transition-all duration-500 transform translate-y-6 group-[&:hover]/media:translate-y-0 delay-100 pointer-events-auto">
-                  <span class="text-white text-sm font-semibold bg-blue-600 hover:bg-blue-500 shadow-[0_0_20px_rgba(37,99,235,0.4)] px-6 py-3 rounded-full flex items-center gap-2 transition-all cursor-pointer">
-                      <i class="fas fa-play text-xs"></i>
-                      View Flow
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-60 group-[&:hover]/media:opacity-90 transition-opacity duration-500 z-10"></div>
+
+          <div class="absolute inset-0 flex items-center justify-center z-20">
+              <div class="opacity-0 group-[&:hover]/media:opacity-100 transition-all duration-500 transform translate-y-6 group-[&:hover]/media:translate-y-0">
+                  <span class="text-white text-sm font-semibold ${isMobileApp ? "bg-blue-600 hover:bg-blue-500 shadow-[0_0_20px_rgba(37,99,235,0.4)]" : "bg-purple-600/90 hover:bg-purple-500 backdrop-blur-sm shadow-[0_0_20px_rgba(147,51,234,0.4)]"} px-6 py-3 rounded-full flex items-center gap-2 transition-all">
+                      <i class="fas ${isMobileApp ? "fa-play" : "fa-eye"} text-xs"></i>
+                      ${isMobileApp ? "View Flow" : "View Project"}
                   </span>
               </div>
           </div>
-        </div>
-      `
-      : `
-        <div class="flex-1 min-h-[320px] sm:min-h-[380px] bg-gray-900 overflow-hidden relative group/media">
-            <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover object-top transition-transform duration-1000 group-[&:hover]/media:scale-110 opacity-90 group-[&:hover]/media:opacity-100">
-            
-            <div class="absolute top-4 left-4 flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/10 text-white text-[10px] uppercase font-bold tracking-wider px-3 py-1.5 rounded-full shadow-lg z-20">
-                <i class="fas fa-desktop mr-1.5 text-[11px] text-purple-400"></i> Web
-            </div>
-
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-60 group-[&:hover]/media:opacity-90 transition-opacity duration-500 z-10"></div>
-            
-            <div class="absolute inset-0 flex items-center justify-center z-20">
-                <div class="opacity-0 group-[&:hover]/media:opacity-100 transition-all duration-500 transform translate-y-6 group-[&:hover]/media:translate-y-0">
-                    <span class="text-white text-sm font-semibold bg-purple-600/90 hover:bg-purple-500 backdrop-blur-sm shadow-[0_0_20px_rgba(147,51,234,0.4)] px-6 py-3 rounded-full flex items-center gap-2 transition-all">
-                        <i class="fas fa-eye text-xs"></i>
-                        View Project
-                    </span>
-                </div>
-            </div>
-        </div>
-      `;
+      </div>
+    `;
 
     card.innerHTML = `
             ${projectMediaHtml}
-        <div class="p-6 flex flex-col flex-grow bg-gradient-to-b from-gray-800/40 to-gray-800/80">
-                <h3 class="text-xl font-bold mb-2 text-gray-100 group-hover:text-blue-400 transition-colors duration-300">${project.title}</h3>
-                <p class="text-gray-400 text-sm mb-6 line-clamp-2">${project.description}</p>
-                <div class="mt-auto pt-4 border-t border-gray-700/50">
+        <div class="project-card-content flex flex-col flex-grow bg-gradient-to-b from-gray-800/40 to-gray-800/80">
+                <h3 class="text-lg font-bold mb-1.5 text-gray-100 group-hover:text-blue-400 transition-colors duration-300">${project.title}</h3>
+                <p class="text-gray-400 text-sm mb-3 line-clamp-2">${project.description}</p>
+                <div class="mt-auto pt-3 border-t border-gray-700/50">
                     <div class="flex gap-2 flex-wrap">
                         ${techIconsHtml}
                     </div>
@@ -368,51 +335,18 @@ function openModal(project) {
   if (project.videoUrl) {
     mediaElement = `<iframe class="w-full h-full" src="${project.videoUrl}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
   } else if (project.gallery?.length) {
-    if (isMobileGallery) {
-      mediaElement = `
-            <div class="w-full h-full bg-gradient-to-br from-gray-900 via-black to-blue-950/50 p-3 sm:p-4 flex flex-col">
-                <div class="flex-1 flex items-center justify-center overflow-hidden relative">
-                    <div class="absolute -inset-8 bg-blue-600/10 blur-3xl"></div>
-
-                    <div class="absolute h-[82%] w-[150px] bg-black border-[4px] border-gray-800 rounded-[2rem] shadow-xl overflow-hidden -translate-x-16 rotate-[-8deg] opacity-70">
-                      <img src="${project.gallery[1] || project.gallery[0]}" alt="${project.title} preview left" class="w-full h-full object-cover" aria-hidden="true">
-                    </div>
-
-                    <div class="relative h-[90%] w-[150px] bg-black border-[4px] border-blue-500/40 rounded-[2rem] shadow-2xl overflow-hidden z-10">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[40%] h-2 bg-gray-800 rounded-b-xl z-10  sm:block"></div>
-                        <img id="modal-gallery-main" src="${project.gallery[0]}" alt="${project.title}" class="w-full h-full object-cover transition-opacity duration-300">
-                    </div>
-
-                    <div class="absolute h-[82%] w-[150px] bg-black border-[4px] border-gray-800 rounded-[2rem] shadow-xl overflow-hidden translate-x-16 rotate-[8deg] opacity-70">
-                      <img src="${project.gallery[2] || project.gallery[0]}" alt="${project.title} preview right" class="w-full h-full object-cover" aria-hidden="true">
-                    </div>
-                </div>
-                <div class="mt-3 flex gap-2 overflow-x-auto justify-center pb-1">
-                    ${project.gallery
-                      .map(
-                        (img, index) => `
-                        <button type="button" data-gallery-index="${index}" class="w-14 h-14 sm:w-16 sm:h-16 rounded-lg border border-gray-600 overflow-hidden transition-all duration-200 ${index === 0 ? "ring-2 ring-blue-500 opacity-100" : "opacity-70"}">
-                            <img src="${img}" alt="${project.title} screenshot ${index + 1}" class="w-full h-full object-cover">
-                        </button>
-                    `,
-                      )
-                      .join("")}
-                </div>
-            </div>
-            `;
-    } else {
-      mediaElement = `
+    mediaElement = `
             <div class="w-full h-full bg-gradient-to-b from-gray-900 to-black p-4 flex flex-col">
                 <div class="flex-1 flex items-center justify-center overflow-hidden">
                     <div class="h-full max-h-full rounded-[2rem] border border-gray-600 bg-black/40 p-2 shadow-xl">
-                        <img id="modal-gallery-main" src="${project.gallery[0]}" alt="${project.title}" class="h-full w-auto object-contain rounded-[1.5rem]">
+                        <img id="modal-gallery-main" src="${project.image}" alt="${project.title}" class="h-full w-auto object-contain rounded-[1.5rem]">
                     </div>
                 </div>
                 <div class="mt-3 flex gap-2 overflow-x-auto justify-center">
                     ${project.gallery
                       .map(
                         (img, index) => `
-                        <button type="button" data-gallery-index="${index}" class="w-14 h-14 rounded-lg border border-gray-600 overflow-hidden transition-all duration-200 ${index === 0 ? "ring-2 ring-blue-500 opacity-100" : "opacity-70"}">
+                        <button type="button" data-gallery-index="${index}" class="w-14 h-14 rounded-lg border border-gray-600 overflow-hidden transition-all duration-200 ${img === project.image ? "ring-2 ring-blue-500 opacity-100" : "opacity-70"}">
                             <img src="${img}" alt="${project.title} screenshot ${index + 1}" class="w-full h-full object-cover">
                         </button>
                     `,
@@ -421,7 +355,6 @@ function openModal(project) {
                 </div>
             </div>
             `;
-    }
   } else {
     mediaElement = `<img src="${project.image}" alt="${project.title}" class="w-full h-full object-contain">`;
   }

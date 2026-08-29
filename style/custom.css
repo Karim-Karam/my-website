@@ -1,27 +1,67 @@
 /* css/custom.css */
 
+#projects-grid > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card {
+  min-height: 230px;
+}
+
+/* Lock media box to a fixed size so image intrinsic dimensions never affect card height */
+.project-media {
+  position: relative;
+  flex: 0 0 170px !important;
+  height: 170px !important;
+  min-height: 170px;
+}
+
+.project-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card-content {
+  padding: 0.7rem 0.85rem 0.9rem;
+}
+
+.project-card-content h3 {
+  line-height: 1.25;
+}
+
+.project-card-content p {
+  line-height: 1.45;
+}
+
 /* Style for the active filter button */
 .filter-btn.active {
-    background-color: rgb(37 99 235 / 0.8); /* bg-blue-600/80 */
-    color: white;
-    border-color: rgb(59 130 246); /* border-blue-500 */
-    box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+  background-color: rgb(37 99 235 / 0.8); /* bg-blue-600/80 */
+  color: white;
+  border-color: rgb(59 130 246); /* border-blue-500 */
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
 }
 
 /* Prevent body scroll when modal is open */
 body.modal-open {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 /* Animation for modal appearance */
 #project-modal.hidden #modal-content {
-    transform: scale(0.95);
-    opacity: 0;
+  transform: scale(0.95);
+  opacity: 0;
 }
 #project-modal #modal-content {
-    transform: scale(1);
-    opacity: 1;
-    transition: transform 300ms ease-out, opacity 300ms ease-out;
+  transform: scale(1);
+  opacity: 1;
+  transition:
+    transform 300ms ease-out,
+    opacity 300ms ease-out;
 }
 
 /* ==================================
@@ -29,86 +69,86 @@ body.modal-open {
    ================================== */
 
 .skill-slide {
-    flex-shrink: 0;
-    /* width: 33.333333%; */
-    padding: 1rem;
+  flex-shrink: 0;
+  /* width: 33.333333%; */
+  padding: 1rem;
 }
 
 @media (min-width: 640px) {
-    .skill-slide {
-        width: 25%;
-    }
+  .skill-slide {
+    width: 25%;
+  }
 }
 
 @media (min-width: 768px) {
-    .skill-slide {
-        width: 20%;
-    }
+  .skill-slide {
+    width: 20%;
+  }
 }
 
 @media (min-width: 1024px) {
-    .skill-slide {
-        width: 16.666667%;
-    }
+  .skill-slide {
+    width: 16.666667%;
+  }
 }
 
 .skill-slide-content {
-    /* background-color: rgba(31, 41, 55, 0.5); */
-    backdrop-filter: blur(4px);
-    padding: 1.5rem;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* border: 1px solid rgb(55, 65, 81); */
-    height: 100%;
-    transition: all 0.3s ease-in-out;
-    transform: scale(1);
+  /* background-color: rgba(31, 41, 55, 0.5); */
+  backdrop-filter: blur(4px);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid rgb(55, 65, 81); */
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
 }
 
 .skill-slide-content:hover {
-    transform: scale(1.5);
-    /* background-color: rgb(31, 41, 55); */
-    /* border-color: rgb(59, 130, 246); */
+  transform: scale(1.5);
+  /* background-color: rgb(31, 41, 55); */
+  /* border-color: rgb(59, 130, 246); */
 }
 
 .skill-slide-content img {
-    width: 120px !important;
-    height: 120px !important;
-    margin-bottom: 1rem;
-    -webkit-user-drag: none;
-    user-select: none;
+  width: 120px !important;
+  height: 120px !important;
+  margin-bottom: 1rem;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .skill-slide-content h3 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: rgb(229, 231, 235);
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(229, 231, 235);
 }
 
 /* Navigation Buttons Styling */
 .slider-nav-btn {
-    position: absolute;
-    display: none;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    background-color: rgba(31, 41, 55, 0.5);
-    backdrop-filter: blur(4px);
-    color: white;
-    border-radius: 9999px;
-    width: 3rem;
-    height: 3rem;
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
-    /* border: 1px solid rgb(55, 65, 81); */
-    transition: all 0.3s;
+  position: absolute;
+  display: none;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(31, 41, 55, 0.5);
+  backdrop-filter: blur(4px);
+  color: white;
+  border-radius: 9999px;
+  width: 3rem;
+  height: 3rem;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid rgb(55, 65, 81); */
+  transition: all 0.3s;
 }
 
 .slider-nav-btn:hover {
-    background-color: rgb(37, 99, 235);
-    border-color: rgb(59, 130, 246);
-    transform: translateY(-50%) scale(1.1);
+  background-color: rgb(37, 99, 235);
+  border-color: rgb(59, 130, 246);
+  transform: translateY(-50%) scale(1.1);
 }
